@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Macro-bias-bot</title>
+<style>
+body{font-family:system-ui;background:#0a0a0a;color:#fff;padding:20px;max-width:600px;margin:auto}
+.card{background:#1a1a1a;padding:20px;border-radius:16px;margin:15px 0;border:1px solid #2a2a2a}
+button{background:#00ff88;color:#000;border:0;padding:14px;border-radius:12px;font-weight:900;width:100%;margin-top:10px}
+input,select{width:100%;padding:12px;border-radius:10px;border:1px solid #333;background:#111;color:#fff;margin:8px 0;box-sizing:border-box}
+h1{color:#00ff88}
+</style>
+</head>
+<body>
+<h1>Macro-bias-bot</h1>
+<p>Permanent - never expires</p>
+<div class="card">
+<input id="pair" placeholder="XAUUSD" value="XAUUSD">
+<select id="tf"><option>Daily Bullish</option><option>Daily Bearish</option></select>
+<select id="news"><option>High Impact USD Today</option><option>No News</option></select>
+<button onclick="analyze()">Analyze Bias</button>
+<div id="result" style="margin-top:15px"></div>
+</div>
+<script>
+function analyze(){
+let bias=document.getElementById('tf').value;
+document.getElementById('result').innerHTML='<b>Bias: '+bias+'</b><br>Plan: Look for '+bias+' structure';
+}
+</script>
+</body>
+</html>
